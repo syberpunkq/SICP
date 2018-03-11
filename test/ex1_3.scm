@@ -1,0 +1,8 @@
+(define (sqr n) (* n n))
+(define (sum_of_sqr x y) 
+  (+ (sqr x) (sqr y)))
+(define (sum_of_sqr_of_two_max a b c) 
+  (cond ((and (< c a) (< c b)) (sum_of_sqr a b))
+        ((and (< b a) (< b c)) (sum_of_sqr a c))
+        (else (sum_of_sqr b c))))
+(sum_of_sqr_of_two_max 3 2 11)
